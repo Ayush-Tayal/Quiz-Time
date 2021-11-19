@@ -1,6 +1,9 @@
 import React from 'react'
-
+import { useSelector } from 'react-redux'
 const Navbar = () => {
+    const score = useSelector(state => state.score)
+    console.log("score", score)
+    
     return (
         <>
             <nav className="navbar navbar-light bg-dark">
