@@ -8,7 +8,7 @@ const Navbar = () => {
                     <a href="/" className="navbar-brand text-light">Quiz-Game</a>
                     <form className="d-flex">
                   
-                    <button className="btn btn-success" type="submit">Score: 0</button>
+                    <button className="btn btn-success" disabled={true} type="submit">Score: 0</button>
                     </form>
                 </div>
             </nav>
