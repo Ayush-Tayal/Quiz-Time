@@ -1,20 +1,21 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 const Navbar = () => {
-    const score = useSelector(state => state.score)
-    console.log("score", score)
+    const score = useSelector(state => state.scores);
+    // console.log("score", score);
     
     return (
         <>
-            <nav className="navbar navbar-light bg-dark">
-                <div className="container">
-                    <a href="/" className="navbar-brand text-light">Quiz-Game</a>
-                    <form className="d-flex">
-                  
-                    <button className="btn btn-success" disabled={true} type="submit">Score: 0</button>
-                    </form>
+            <nav className="navbar">
+                <div className="title">
+                    <a href="/">Quiz-Time</a>
+                </div>
+
+                <div className="nav-score">
+                    <button>Your Score: {score}</button>
                 </div>
             </nav>
+
         </>
     )
 }

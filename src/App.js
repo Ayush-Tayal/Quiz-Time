@@ -8,7 +8,7 @@ function App() {
       <Navbar/>
       <Quiz/>
     </div>
-  );
+  )
 }
 
 export default App;

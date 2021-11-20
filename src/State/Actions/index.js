@@ -2,15 +2,17 @@ export const RIGHT_ANSWER = "RIGHT_ANSWER";
 export const WRONG_ANSWER = "WRONG_ANSWER";
 
 
-export const rightAnswer = ()=> {
+export const rightAnswer = (data)=> {
     return {
-        type:RIGHT_ANSWER
+        type:RIGHT_ANSWER,
+        payload:data
     }
 }
 
 
-export const wrongAnswer = ()=> {
+export const wrongAnswer = (data)=> {
     return {
-        type:WRONG_ANSWER
+        type:WRONG_ANSWER,
+        payload:data
     }
 }
