@@ -118,7 +118,16 @@ button {
 
 .final-div {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
+  border: 1px solid white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  box-shadow: 5px 10px 20px -6px rgba(255, 255, 255, 0.65);
+  background-color: greenyellow;
+  color: black;
 }
 .finalScore {
   font-size: 4rem;
@@ -126,7 +135,7 @@ button {
 
 .restart {
   color: white;
-  background-color: black;
+  background-color: blue;
   padding: 1.5rem;
   font-size: 2rem;
   border-radius: 10px;

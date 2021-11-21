@@ -11,7 +11,7 @@ const scoreReducer = (state=initialState, action)=>{
         }
         
         case WRONG_ANSWER:{
-            return state - 1;
+            return state - 0;
         }
 
         default:{
