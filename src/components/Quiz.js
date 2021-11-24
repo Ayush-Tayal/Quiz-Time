@@ -17,6 +17,10 @@ const Quiz = () => {
     // console.log("que number ", queNo)
   };
 
+  const handlePrevQue=()=>{
+    queNo>0?setQueNo(queNo-1):setQueNo(0)
+  }
+
   const handleOptionsClick = (isRight) => {
     isRight ? console.log("true") : console.log("false");
     isRight ? dispatch(rightAnswer()) : dispatch(wrongAnswer());
@@ -48,7 +52,8 @@ const Quiz = () => {
                 <button
                   onClick={() => {
                     handleOptionsClick(option.isCorrect);
-                  }}
+                  }} 
+                  key={i}
                 >
                   {" "}
                   {option.answerText}
@@ -58,15 +63,24 @@ const Quiz = () => {
           </div>
 
           <div className="buttons">
-            <button className="skipQue" onClick={handleNextQue}>
-              Skip Question
-            </button>
+            <div className="prevNext">
+              <button className="prevQue" onClick={handlePrevQue}>
+                  Previous Question
+              </button>
+
+              <button className="skipQue" onClick={handleNextQue}>
+                  Skip Question
+              </button>
+            </div>
+
             <button className="submit" onClick={handleSubmit}>
               Submit
             </button>
           </div>
         </div>
-      ) : (
+      ) 
+      :
+      (
         <div className="final-div">
           <h1 className="finalScore">Your Final Score is: {score}</h1>
           <button
